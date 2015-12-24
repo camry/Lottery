@@ -24,8 +24,5 @@ div.item{margin-bottom:8px;margin-left:8px;float:left;vertical-align:middle;font
 .ui-dialog-content h2{color:#e00;}
 .ui-dialog-content h3{color:#666;}
 
-@media (min-width:900px){div.item{width:40px;line-height:40px;height:40px;}}
-@media (min-width:1200px){div.item{width:50px;line-height:50px;height:50px;}}
-@media (min-width:1440px){div.item{width:60px;line-height:60px;height:60px;}}
-@media (min-width:1500px){div.items{width:100px;}div.item{width:100px;line-height:50px;height:50px;}}
+div.item{width:100px;line-height:50px;height:50px;}
 .hide{display:none};
