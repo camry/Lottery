@@ -69,7 +69,6 @@ $("document").ready(function(){
         {
             customers.push(index);
         }
-        $("div.items").append("<div class='item i"+index+"' data-index='"+index+"'>"+(++index)+"</div>");
         var lm = [];
         $.each(lotteryPrefixes, function(index, value){
             var temp = localStorage.getItem(value+"lotteryMembers");
@@ -78,10 +77,12 @@ $("document").ready(function(){
                 lm = $.merge(lm, temp.split(','));
             }
         });
+        var ignoreClassName = '';
         if($.inArray(value, lm) >= 0)
         {
-            $("div.item.i"+index).addClass('ignore');
+            ignoreClassName = ' ignore';
         }
+        $("div.items").append("<div class='item i"+index+ignoreClassName+"' data-index='"+index+"'>"+(++index)+"</div>");
     });
 
 	//本地存储item宽度信息
