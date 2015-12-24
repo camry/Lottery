@@ -69,7 +69,7 @@ $("document").ready(function(){
         {
             customers.push(index);
         }
-        $("div.items").append("<div class='item i"+index+"' data-index='"+index+"'>"+value+"</div>");
+        $("div.items").append("<div class='item i"+index+"' data-index='"+index+"'>"+(++index)+"</div>");
         var lm = [];
         $.each(lotteryPrefixes, function(index, value){
             var temp = localStorage.getItem(value+"lotteryMembers");
