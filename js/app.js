@@ -180,10 +180,10 @@ $("document").ready(function(){
             {
                 //deal customers
                 var runCount = $(".ss>ol>li").size();
-                if(runCount >= 1 && lotteryNumber < 2)
+                if(runCount >= 1 && lotteryNumber < 2 && customers.length > 0)
                 {
                     var randCustomer = Math.floor(Math.random() * customers.length);
-                    if($(".si"+customers[randCustomer]).attr('data-number') != customers[randCustomer])
+                    if($(".i"+customers[randCustomer]+".ignore").attr('data-index') != customers[randCustomer])
                     {
                         $(".item.active").removeClass("active");
                         $("div.item:not(.ignore):not(.active).i"+customers[randCustomer]).addClass("active");
