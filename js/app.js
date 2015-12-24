@@ -25,6 +25,9 @@ pausemic.volume=1.0;
 
 var keyStatus=false;
 
+//帮助对象
+var readmeDialog = showReadme();
+
 $("document").ready(function(){
     
     //初始化皮肤
@@ -107,6 +110,7 @@ $("document").ready(function(){
     $("body").keyup(function(e){
     	keyStatus = false;
 	});
+
 	//全局键盘事件监听
 	$("body").keydown(function(e){
 		if(isStart){
@@ -122,10 +126,13 @@ $("document").ready(function(){
 			return true;
 		}
 		//按F1弹出帮助窗口
-		if(e.keyCode==112)
+		if(e.keyCode == 112)
         {
 			e.preventDefault();
-			showReadme();
+            if($(".readme:hidden").size() > 0)
+                readmeDialog.show();
+            else
+                readmeDialog.close();
 			return false;
 		}
 		//ESC案件呼出隐藏菜单
@@ -292,8 +299,14 @@ function startApp(){
 	}, pl);
 	runtx = setInterval(function(){runingmic.currentTime = 0;},7000);
 }
-function showReadme(){
-	var d = dialog({
+/**
+ * 显示帮助信息
+ *
+ * @returns dialog
+ */
+function showReadme()
+{
+	return dialog({
 		    title: '帮助信息',
 		    content: $(".readme") ,
 		    width:'400px',
@@ -303,9 +316,8 @@ function showReadme(){
 		    onclose: function () {
 		        pause=false;
 		    }
-	}).show();
+	});
 }
-
 var dynamicLoading = {
     css: function(path){
 		if(!path || path.length === 0){
