@@ -1,7 +1,7 @@
 body{background:#ccc;padding:5px;overflow-y:hidden;overflow-x:hidden;}
-#bodybg{position:fixed;width:100%;height:100%$;left:0px;top:0px;z-index:-1;}
+#bodybg{position:fixed;width:100%;height:100%;left:0px;top:0px;z-index:-1;}
 #bodybg .stretch{width:100%;height:100%;}
-div.top{font-family:'\5FAE\8F6F\96C5\9ED1';width:100%;height:80px;text-align:center;line-height:80px;font-size:30px;}
+div.top{font-family:'\5FAE\8F6F\96C5\9ED1';width:100%;height:80px;text-align:center;line-height:80px;font-size:48px;color:gold;}
 div.menu{font-family:'\5FAE\8F6F\96C5\9ED1';padding:10px 20px 10px 0;width:300px;float:right;height:80%;overflow-y: auto;box-sizing: border-box;}
 .olTitle{margin-top:5px;font-size:35px;margin-left:-45px;}
 .sequence{width:220px;height:95%;padding-left:60px;margin-right:20px;overflow-y:auto;}
